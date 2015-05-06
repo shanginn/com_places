@@ -1,0 +1,1 @@
+DROP TABLE `#__places_point`, `#__places_town`;

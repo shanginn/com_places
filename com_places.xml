@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="component" version="3.4.0" method="upgrade">
+    <name>COM_PLACES</name>
+    <creationDate>2015-04-27</creationDate>
+    <copyright>© 2015. Все права защищены.</copyright>
+    <license>GNU General Public License версии 2 или более поздней;</license>
+    <authorCompany>Saity74 LLC</authorCompany>
+    <author>Shangin Nikolai @shance</author>
+    <authorEmail>shanginn@gmail.com</authorEmail>
+    <authorUrl>saity74.ru</authorUrl>
+    <version>0.2.2</version>
+    <description>COM_PLACES_XML_DESCRIPTION</description>
+    
+    <scriptfile>script.php</scriptfile>
+    
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <update> <!-- Runs on update -->
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+    
+    <languages folder="site/language">
+        <language tag="ru-RU">ru-RU/ru-RU.com_places.ini</language>
+    </languages>
+
+    <files folder="site">
+        <filename>places.php</filename>
+        <filename>controller.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <folder>assets</folder>
+        <folder>controllers</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+        <folder>language</folder>
+    </files>
+
+    <administration>
+        <menu link='index.php?option=com_places' img="class:">COM_PLACE_MENU</menu>
+        <submenu>
+            <menu link="option=com_places" img="" alt="Places/Points">COM_PLACES_SUBMENU_POINTS</menu>
+            <menu link="option=com_places" view="towns" img="" alt="Places/Towns">COM_PLACES_SUBMENU_TOWNS</menu>
+        </submenu>
+
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>places.php</filename>
+            <filename>com_places.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <folder>assets</folder>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <folder>language</folder>
+        </files>
+
+         <languages folder="administrator">
+            <language tag="ru-RU">language/ru-RU/ru-RU.com_places.ini</language>
+            <language tag="ru-RU">language/ru-RU/ru-RU.com_places.sys.ini</language>
+        </languages>
+    </administration>
+</extension>

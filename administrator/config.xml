@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			filter="rules"
+			validate="rules"
+			component="com_places"
+			section="component" />
+	</fieldset>
+	<fieldset name="advanced">
+		<field
+		       name="btntype"
+		       type="text"
+		       label="COM_PLACES_CONFIG_BTNTYPE_LABEL"
+		       description="COM_PLACES_CONFIG_BTNTYPE_DESC"
+		       class="inputbox"
+		       component="com_places"
+		       section="component"
+		/>
+		<field
+		       name="moreitems"
+		       type="radio"
+		       label="COM_PLACES_CONFIG_MOREITEMS_LABEL"
+		       description="COM_PLACES_CONFIG_MOREITEMS_DESC"
+		       class="btn-group"
+		       component="com_places"
+		       section="component"
+		       default="1"
+		>
+			<option
+				value="0">JHIDE</option>
+			<option
+				value="1">JSHOW</option>
+		</field>
+		
+		<field
+		       name="watcheditems"
+		       type="radio"
+		       label="COM_PLACES_CONFIG_WATCHEDITEMS_LABEL"
+		       description="COM_PLACES_CONFIG_WATCHEDITEMS_DESC"
+		       class="btn-group"
+		       component="com_places"
+		       section="component"
+		       default="1"
+		>
+			<option
+				value="0">JHIDE</option>
+			<option
+				value="1">JSHOW</option>
+		</field>
+		 
+	</fieldset>
+</config>
