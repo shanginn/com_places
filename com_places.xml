@@ -76,7 +76,7 @@
     </administration>
 
     <updateservers>
-        <server type="extension" priority="1" name="Saity74 Extension's Updates">http://jupdates.s74.org/places.xml</server>
+        <server type="extension" priority="1" name="Shance extension's updates from git">https://raw.githubusercontent.com/Shance/JUpdates/master/places.xml</server>
     </updateservers>
 
 </extension>
