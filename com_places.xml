@@ -8,7 +8,7 @@
     <author>Shangin Nikolai @shance</author>
     <authorEmail>shanginn@gmail.com</authorEmail>
     <authorUrl>saity74.ru</authorUrl>
-    <version>0.2.2</version>
+    <version>0.2.21</version>
     <description>COM_PLACES_XML_DESCRIPTION</description>
     
     <scriptfile>script.php</scriptfile>
@@ -74,4 +74,9 @@
             <language tag="ru-RU">language/ru-RU/ru-RU.com_places.sys.ini</language>
         </languages>
     </administration>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Saity74 Extension's Updates">http://jupdates.s74.org/places.xml</server>
+    </updateservers>
+
 </extension>
