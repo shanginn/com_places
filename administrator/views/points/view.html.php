@@ -95,7 +95,7 @@ class PlacesViewPoints extends JViewLegacy
     }
 
     // Add a batch button
-    if ($user->authorise('core.create', 'com_content') && $user->authorise('core.edit', 'com_content') && $user->authorise('core.edit.state', 'com_content'))
+    if ($user->authorise('core.create', 'com_places') && $user->authorise('core.edit', 'com_places') && $user->authorise('core.edit.state', 'com_places'))
     {
       JHtml::_('bootstrap.modal', 'collapseModal');
       $title = JText::_('JTOOLBAR_BATCH');
