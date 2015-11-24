@@ -5,6 +5,14 @@ defined('_JEXEC') or die;
 class PlacesControllerPoint extends JControllerForm
 {
   
+  /**
+	 * The URL view list variable.
+	 *
+	 * @var    string
+	 * @since  12.2
+	 */
+	protected $view_list = 'attrs';
+	
 	/**
    * Class constructor.
    *
@@ -24,6 +32,33 @@ class PlacesControllerPoint extends JControllerForm
       $this->view_item = 'point&return=featured';
     }
   }
+ 
+	/**
+	 * Method to save the submitted ordering values for records via AJAX.
+	 *
+	 * @return  void
+	 *
+	 * @since   3.0
+	 */
+	public function saveOrderAjax()
+	{
+		// Get the input
+		$pks = $this->input->post->get('cid', array(), 'array');
+		$order = $this->input->post->get('order', array(), 'array');
+		// Sanitize the input
+		JArrayHelper::toInteger($pks);
+		JArrayHelper::toInteger($order);
+		// Get the model
+		$model = $this->getModel();
+		// Save the ordering
+		$return = $model->saveorder($pks, $order);
+		if ($return)
+		{
+			echo "1";
+		}
+		// Close the application
+		JFactory::getApplication()->close();
+	}
 	
   /**
    * Method override to check if you can add a new record.
